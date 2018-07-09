@@ -1,0 +1,71 @@
+public class PersonDetails {
+	
+	public static void main(String[] args) {
+		System.out.println("Person Details:\n"
+							+"____________\n"
+							+"\nFirst Name: Diyva\n"
+							+"Last Name: Bharathi\n"
+							+"Gender: F\n"
+							+"Age: 20\n"
+							+"Weight: 85.55");	
+	}
+}public class personclass {
+	String Firstname;
+	String Lastname;
+	char Gender;
+	
+	public personclass(String Fname, String Lname,char G)
+	{
+		Firstname=Fname;
+		 Lastname=Lname;
+		 Gender=G;
+		
+		displayDetails();
+		}
+	
+	public void getDetails(String  fname, String lname, char gen)
+	{
+		Firstname=fname;
+				 Lastname=lname;
+				 Gender=gen;
+	}
+	
+public void displayDetails()
+{
+	System.out.println("First Name : "+ Firstname);
+	System.out.println("Last Name : "+ Lastname);
+	System.out.println("Gender : "+ Gender);
+	System.out.println("____________________________");
+	}
+public static void main(String args[])
+{
+	 System.out.println("Person Details");
+		System.out.println("______________");
+	personclass person= new personclass("Leela", "Chatti", 'F');
+	personclass person1= new personclass("Paidi Raju", "Chatti", 'M');
+	personclass person2= new personclass("Lohitha", "Chatti", 'F');
+	personclass person3= new personclass("Shaildendra", "Chatti", 'M');
+}
+}
+
+Output:
+
+
+Person Details
+______________
+First Name : Leela
+Last Name : Chatti
+Gender : F
+____________________________
+First Name : Paidi Raju
+Last Name : Chatti
+Gender : M
+____________________________
+First Name : Lohitha
+Last Name : Chatti
+Gender : F
+____________________________
+First Name : Shaildendra
+Last Name : Chatti
+Gender : M
+____________________________

@@ -1,0 +1,68 @@
+public class mobilenumberAddition {
+	String Firstname;
+	String Lastname;
+	char Gender;
+	String number;
+	
+	public mobilenumberAddition(String Fname, String Lname,char G,String num)
+	{
+		Firstname=Fname;
+		 Lastname=Lname;
+		 Gender=G;
+		 number=num;
+		
+		displayDetails();
+		}
+	
+	public void getDetails(String  fname, String lname, char gen,String no)
+	{
+		Firstname=fname;
+				 Lastname=lname;
+				 Gender=gen;
+				 number=no;
+	}
+	
+public void displayDetails()
+{
+	System.out.println("First Name : "+ Firstname);
+	System.out.println("Last Name : "+ Lastname);
+	System.out.println("Gender : "+ Gender);
+	System.out.println("Mobile Number : "+number);
+	System.out.println("____________________________");
+	}
+public static void main(String args[])
+{
+	 System.out.println("Person Details");
+		System.out.println("______________");
+		mobilenumberAddition person= new mobilenumberAddition("Leela", "Chatti", 'F',"1231231234");
+		mobilenumberAddition person1= new mobilenumberAddition("Paidi Raju", "Chatti", 'M',"1231231234");
+		mobilenumberAddition person2= new mobilenumberAddition("Lohitha", "Chatti", 'F',"1231231234");
+		mobilenumberAddition person3= new mobilenumberAddition("Shaildendra", "Chatti", 'M',"1564564567");
+}
+}
+
+
+Output:
+
+Person Details
+______________
+First Name : Leela
+Last Name : Chatti
+Gender : F
+Mobile Number : 1231231234
+____________________________
+First Name : Paidi Raju
+Last Name : Chatti
+Gender : M
+Mobile Number : 1231231234
+____________________________
+First Name : Lohitha
+Last Name : Chatti
+Gender : F
+Mobile Number : 1231231234
+____________________________
+First Name : Shaildendra
+Last Name : Chatti
+Gender : M
+Mobile Number : 1564564567
+____________________________ 

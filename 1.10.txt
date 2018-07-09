@@ -1,0 +1,39 @@
+import java.io.*;
+import java.util.*;
+class positiveString
+{
+String alphaOrder(String str)
+{
+char[] charArray=str.toCharArray();
+Arrays.sort(charArray);
+String aString=new String(charArray);
+return aString;
+}
+public static void main(String[] args)throws IOException
+{
+System.out.println("Enter the String: ");
+BufferedReader br=new BufferedReader(new
+InputStreamReader(System.in));
+String inputString=br.readLine();
+positiveString obj=new positiveString();
+String alphaString=obj.alphaOrder(inputString);
+if(alphaString.equals(inputString))
+{
+	System.out.println("True(It's a Positive String)");
+}
+else
+{
+	System.out.println("False(It's not a Positive String)");
+}
+}
+}
+
+Output:
+
+Enter the String: 
+abc
+True(It's a Positive String) 
+
+Enter the String: 
+cba
+False(It's not a Positive String) 

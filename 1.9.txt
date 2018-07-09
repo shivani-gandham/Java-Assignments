@@ -1,0 +1,109 @@
+import java.util.Scanner;
+
+
+public class Sample{
+	public static void main(String args[])
+	{
+		String str;
+		char ch;
+		int i,j,k,l,len;
+		System.out.println("Enter your String");
+		  Scanner in = new Scanner(System.in);
+           str = in.nextLine();
+		     String name=str;
+		   
+		    
+		    	   System.out.println ( "1) Adding String to itself 1\n2) Replace Odd positions with #\n3) Remove duplicate characters 3\n4) Change odd position characters to Upper case" );
+		    	  
+		    	  switch ( in.nextInt() ) {
+		          case 1:
+		            System.out.println ( "You picked Adding String to itself" );
+		            		System.out.print(str);
+		            		System.out.print(str);
+		            break;
+		          case 2:
+		            System.out.println ( "You picked Replacing Odd positions with #" );
+		            for (i=0; i < str.length(); i++){
+		                if (i % 2 != 0){
+		                  str = str.substring(0,i-1) + "#" + str.substring(i, str.length());
+		                }
+		              }
+                     System.out.println(str);
+                     break;
+		          case 3:
+		            System.out.println ( "You picked to remove duplicate characters" );
+		            l=str.length();
+		        	 String ans="";
+		        	  
+		            for( i=0; i<l; i++)
+		            {
+		                ch = str.charAt(i);
+		                if(ch!=' ')
+		                    ans = ans + ch;
+		                str= str.replace(ch,' '); //Replacing all occurrence of the current character by a space
+		            }
+		      System.out.println("Word after removing duplicate characters : " + ans);
+		            break;
+		          case 4:
+			            System.out.println ( "You picked option 4" );
+			            for ( i = 0,len = str.length(); i < len; i++) {
+			                 ch = str.charAt(i);
+			                if (i % 2 == 0) {
+			                    System.out.print(Character.toUpperCase(ch));
+			                } else {
+			                    System.out.print(ch);
+			                }
+			            }
+			            System.out.println();
+			            break;
+		          default:
+		            System.err.println ( "Unrecognized option" );
+		            break;
+		        }
+				     
+	}
+
+}
+
+Enter your String
+Shivani
+1) Adding String to itself 1
+2) Replace Odd positions with #
+3) Remove duplicate characters 3
+4) Change odd position characters to Upper case
+1
+You picked Adding String to itself
+ShivaniShivani
+
+
+Enter your String
+shivani
+1) Adding String to itself 1
+2) Replace Odd positions with #
+3) Remove duplicate characters 3
+4) Change odd position characters to Upper case
+2
+You picked Replacing Odd positions with #
+#h#v#ni
+
+
+Enter your String
+shivani
+1) Adding String to itself 1
+2) Replace Odd positions with #
+3) Remove duplicate characters 3
+4) Change odd position characters to Upper case
+3
+You picked to remove duplicate characters
+Word after removing duplicate characters : shivan
+
+
+Enter your String
+shivani
+1) Adding String to itself 1
+2) Replace Odd positions with #
+3) Remove duplicate characters 3
+4) Change odd position characters to Upper case
+4
+You picked option 4
+ShIvAnI

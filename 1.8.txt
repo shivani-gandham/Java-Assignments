@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+
+public class EnumGender{
+	
+	 public  enum gen{ M,F}
+	 public class EnumGender1
+	 {
+		 public static final char M=0;
+		 public static final char F=1;
+		 
+	 }
+	  public static void main(String args[])
+	  {
+		  int l=0;
+	     int num;
+	     float fnum;
+	     String str;
+	 
+	     Scanner in = new Scanner(System.in);
+	 
+	     //Get First name String
+	     System.out.println("Enter First Name: ");
+	     str = in.nextLine();
+	     String fname=str;
+	     //Get First name String
+	     System.out.println("Enter Last Name: ");
+	     str = in.nextLine();
+	     String lname=str;
+	   
+	     //Get Gender
+	     System.out.println("Enter Gender: ");
+	     str= in.nextLine();
+	      String gen=str;
+	 if(gen.equals("M")||gen.equals("m") || gen.equals("F") || gen.equals("f") )
+	 {  
+		 l++;
+	 }
+	 if(l==0)
+	 {
+		 System.out.println("Enter valid Gender");
+		   System.exit(0);
+	 }
+	    System.out.println("Enter your Mobile number: ");
+	     fnum = in.nextInt(); 
+	     System.out.println("Input Float number is: "+fnum);
+	     System.out.println("First Name  is: "+fname);
+	     System.out.println("Last Name  is: "+lname);
+	     System.out.println("Gender  is: "+gen); 
+	     System.out.println("Mobile Number  is: "+fnum); 
+	  }
+	}
+
+
+Output:
+
+
+Input Float number is: 12345
+First Name  is: shivani
+Last Name  is: gandham
+Gender  is: f
+Mobile Number  is: 12345

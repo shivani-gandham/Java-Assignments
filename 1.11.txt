@@ -1,0 +1,39 @@
+import java.util.*;
+import java.time.*;
+import java.time.format.*;
+import java.lang.*;
+public class Sample
+{
+	
+	public void getDuration(String DateInp,DateTimeFormatter df)
+	{
+		String text=DateInp;
+		LocalDate date = LocalDate.parse(text, df);
+		System.out.println(date);
+        LocalDate now = LocalDate.now();
+        Period diff = Period.between(date, now);
+        System.out.printf("Difference is %d years, %d months and %d days old\n\n", 
+                       diff.getYears(), diff.getMonths(), diff.getDays());
+	}
+	
+	public static void main(String[] args) 
+	{
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+		System.out.println("Enter the date in the given format");
+		Scanner sc = new Scanner(System.in);
+		String date=sc.nextLine();
+		Sample obj = new Sample();
+		obj.getDuration(date,dtf);
+		sc.close();
+	}
+	
+}
+
+
+Output:
+
+Enter the date in the given format
+03/10/1995
+1995-10-03
+Difference is 22 years, 9 months and 6 days old
+

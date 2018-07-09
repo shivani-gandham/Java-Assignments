@@ -1,0 +1,73 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
+
+public class ExpiryDate {
+	static int months,years;
+public static void main(String[] args) {
+	
+
+DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+System.out.println("Enter the purchase date in the given format dd/MM/yyyy");
+Scanner sc = new Scanner(System.in);
+String date=sc.nextLine();
+System.out.println("select any one option below:\n 1.No of warrantee months.\n 2.No of warrantee years");
+Scanner sc1 = new Scanner(System.in);
+int w=sc1.nextInt();
+if(w==1)
+{
+	System.out.println("Please enter no of months");
+	Scanner s1 = new Scanner(System.in);
+	months=s1.nextInt();
+	s1.close();
+}
+if(w==2)
+{
+	System.out.println("Please enter no of years");
+	Scanner s1 = new Scanner(System.in);
+	years=s1.nextInt();
+	s1.close();
+
+}
+ExpiryDate obj = new ExpiryDate();
+obj.getWarrantee(date,w,dtf);
+sc.close();
+sc1.close();
+}
+public void getWarrantee(String date,int w,DateTimeFormatter df){
+	String text=date;
+	
+	LocalDate d = LocalDate.parse(text, df);
+	int mm=d.getMonthValue();
+	int m=months+d.getMonthValue();
+	int y=d.getYear()+years;
+	if(m>12){
+		
+		if(m%12!=0)
+		{y=y+m/12;
+		m=m%12;
+		}
+		else
+		{
+			y=y+months/12;
+			m=mm;
+		}
+	}
+    System.out.println("Expiry Date of the product is : "+d.getDayOfMonth()+"/"+m+"/"+y);
+}
+}
+
+
+Output:
+
+Enter the purchase date in the given format dd/MM/yyyy
+04/06/2018
+select any one option below:
+ 1.No of warrantee months.
+ 2.No of warrantee years
+2
+Please enter no of years
+2
+Expiry Date of the product is : 4/6/2020
+

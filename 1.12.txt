@@ -1,0 +1,46 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+	public class dateDaysMonthsYears{
+	  public static void main(String[] args) {
+		  String str;
+	    SimpleDateFormat myFormat = new SimpleDateFormat("dd MM yyyy");
+	    
+	    
+	    Scanner in = new Scanner(System.in);
+		 
+	     //Get First name String
+	     System.out.println("Enter First Date: ");
+	     str= in.nextLine();
+	     String inputString1=str;
+	     //Get First name String
+	     System.out.println("Enter Second Date: ");
+	     str = in.nextLine();
+	     String inputString2=str;    
+	    try{
+	      Date oldDate = myFormat.parse(inputString1);
+	      Date newDate = myFormat.parse(inputString2);
+	      int diffInDays = (int)( (newDate.getTime() - oldDate.getTime())
+	                 / (1000 * 60 * 60 * 24) );
+	      System.out.println("Days "+diffInDays);
+	      System.out.println("Months "+(diffInDays/30));
+	      System.out.println("Years "+(diffInDays/365));
+	      
+	    }catch(Exception ex){
+	       System.out.println(ex);
+	    }
+	  }
+	}
+
+
+Output:
+
+Enter First Date: 
+4 5 2012
+
+Enter Second Date: 
+3 10 2018
+
+Days 2343
+Months 78
+Years 6

@@ -1,0 +1,21 @@
+public class PersonDetails {
+	
+	public static void main(String[] args) {
+		System.out.println("Person Details:\n"
+							+"____________\n"
+							+"\nFirst Name: Diyva\n"
+							+"Last Name: Bharathi\n"
+							+"Gender: F\n"
+							+"Age: 20\n"
+							+"Weight: 85.55");	
+	}
+}
+
+
+Output:
+
+First Name: Diyva
+Last Name: Bharathi
+Gender: F
+Age: 20
+Weight: 85.55

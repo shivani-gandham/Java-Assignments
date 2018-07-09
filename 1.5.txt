@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class postiveOrNegative {
+public static void main(String args[])
+{
+	Scanner sc1=new Scanner(System.in);
+	System.out.println("Enter a value:");
+	int value = sc1.nextInt();
+if(value>=0)
+{
+	System.out.println("Positive");
+}
+if(value==0)
+{
+	System.out.println("Zero");
+}
+if(value<0)
+	System.out.println("Negative");
+}
+	
+}
+
+
+
+Output:
+
+
+Enter a value:
+34
+Positive
+
+
+Enter a value:
+-23
+Negative

@@ -1,0 +1,21 @@
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.util.Scanner;
+
+
+public class Zone {
+public static void main(String[] args) {
+	System.out.println("Please enter a zone id");
+	Scanner sc=new Scanner(System.in);
+	String zone_id=sc.nextLine();
+	ZonedDateTime date=ZonedDateTime.now(ZoneId.of(zone_id));
+	System.out.println("Date and Time of "+zone_id+" is: "+date);
+	sc.close();
+}
+}
+
+Output:
+
+Please enter a zone id
+America/New_York
+Date and Time of America/New_York is: 2018-07-09T03:07:22.149-04:00[America/New_York]
